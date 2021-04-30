@@ -206,6 +206,7 @@ a:hover {
 
   .add:hover {
       background-color: var(--secondary);
+
   }
 
   .add-icon {
@@ -221,4 +222,17 @@ a:hover {
     form {
         width:100%;
     }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+      }
 }
+
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
