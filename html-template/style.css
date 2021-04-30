@@ -1,40 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
 :root {
-    --primary: #C4C4C4;
-    --secondary: #ffffff;
-    --font: #fff;
+    --primary: #64b5f6;
+    --secondary: #f69a64;
+    --font: rgb(73, 73, 73);
     --shaded: #ccc;
 }
 
 
 * {
-    font-family:arial;
+    font-family: 'Jost', sans-serif;
     box-sizing:border-box;
     margin:0;
     padding:0;
+    color:var(--font);
 }
 
 .container {
     display:flex;
     flex-direction: column;
     flex: 1 0 auto;
-    min-height:100vh;
-    min-height: 100vh; 
+    min-height:100vh; 
 }
 
 .header {
     background-color: var(--primary);
-    padding: 20px;
+    padding: 20px 100px;
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .content {
-    background-color: blueviolet;
-    padding: 20px;
-    
+    background-color: #fff;
+    padding: 20px 100px;
+    flex-grow:1;
+    overflow: auto;
+    font-size: 1.1em;
 }
 
 .footer {
-    background-color: burlywood;
-    padding: 20px;
+    background-color:rgb(44, 44, 44);
+    padding: 20px 100px;
+    color:#ccc;
+    text-align: center;
 }
+
+.logo {
+    align-self: flex-start;
+    flex-basis: 200px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.login-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    margin: 10px 0;
+}
+
+.form-row input[type=text],
+.form-row input[type=password] {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border:1px solid var(--shaded);
+    margin: 5px 0;
+}
+
+.form-row button,
+.form-row input[type="submit"],
+.form-row input[type="button"] {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border:1px solid var(--primary);
+    margin: 5px 0;
+    background-color: var(--primary);
+    font-size: 1em;
+    color:#fff;
+    transition: ease-in-out .3s;
+}
+
+.form-row button:hover,
+.form-row input[type="submit"]:hover,
+.form-row input[type="button"]:hover {
+    background-color: #fff;
+    color:var(--primary);
+}
+
+.login-logo {
+    width:200px;
+    height:auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.profile {
+    align-self: flex-end;
+    display: flex;
+    flex-basis: 200px;
+    justify-content:flex-end;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile p {
+    padding-right:10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
