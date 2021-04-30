@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 :root {
-    --primary: #C4C4C4;
-    --secondary: #ffffff;
-    --font: #fff;
+    --primary: #64b5f6;
+    --secondary: #f69a64;
+    --font: rgb(73, 73, 73);
     --shaded: #ccc;
 }
 
@@ -13,6 +13,7 @@
     box-sizing:border-box;
     margin:0;
     padding:0;
+    color:var(--font);
 }
 
 .container {
@@ -37,12 +38,14 @@
     padding: 20px 100px;
     flex-grow:1;
     overflow: auto;
+    font-size: 1.1em;
 }
 
 .footer {
-    background-color:#ccc;
+    background-color:rgb(44, 44, 44);
     padding: 20px 100px;
-    /* flex-basis: 5vh; */
+    color:#ccc;
+    text-align: center;
 }
 
 .logo {
@@ -52,6 +55,52 @@
     font-size: 1.5em;
 }
 
+.login-box {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    margin: 10px 0;
+}
+
+.form-row input[type=text],
+.form-row input[type=password] {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border:1px solid var(--shaded);
+    margin: 5px 0;
+}
+
+.form-row button,
+.form-row input[type="submit"],
+.form-row input[type="button"] {
+    width: 100%;
+    padding: 5px;
+    outline: none;
+    box-sizing: border-box;
+    border:1px solid var(--primary);
+    margin: 5px 0;
+    background-color: var(--primary);
+    font-size: 1em;
+    
+}
+
+.form-row button:hover,
+.form-row input[type="submit"]:hover,
+.form-row input[type="button"]:hover {
+    background-color: #fff;
+}
+
+.login-logo {
+    width:200px;
+    height:auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
 
 .profile {
     align-self: flex-end;
