@@ -1,0 +1,40 @@
+:root {
+    --primary: #C4C4C4;
+    --secondary: #ffffff;
+    --font: #fff;
+    --shaded: #ccc;
+}
+
+
+* {
+    font-family:arial;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    min-height:100vh;
+    min-height: 100vh; 
+}
+
+.header {
+    background-color: var(--primary);
+    padding: 20px;
+    position: sticky;
+    top: 0;
+}
+
+.content {
+    background-color: blueviolet;
+    padding: 20px;
+    
+}
+
+.footer {
+    background-color: burlywood;
+    padding: 20px;
+}
