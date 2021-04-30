@@ -21,7 +21,6 @@
     flex-direction: column;
     flex: 1 0 auto;
     min-height:100vh; 
-    background-color: red;
 }
 
 .header {
@@ -31,6 +30,7 @@
     top: 0;
     display: flex;
     justify-content: space-between;
+
 }
 
 .content {
@@ -86,13 +86,15 @@
     margin: 5px 0;
     background-color: var(--primary);
     font-size: 1em;
-    
+    color:#fff;
+    transition: ease-in-out .3s;
 }
 
 .form-row button:hover,
 .form-row input[type="submit"]:hover,
 .form-row input[type="button"]:hover {
     background-color: #fff;
+    color:var(--primary);
 }
 
 .login-logo {
