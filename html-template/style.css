@@ -5,6 +5,7 @@
     --secondary: #f69a64;
     --font: rgb(73, 73, 73);
     --shaded: #ccc;
+    --danger: #f66464;
 }
 
 
@@ -30,7 +31,6 @@
     top: 0;
     display: flex;
     justify-content: space-between;
-
 }
 
 .content {
@@ -59,20 +59,32 @@
     align-items: center;
     display: flex;
     flex-direction: column;
+    
 }
+
 
 .form-row {
     margin: 10px 0;
+    width:100%;
 }
 
 .form-row input[type=text],
+.form-row input[type=email],
 .form-row input[type=password] {
     width: 100%;
-    padding: 5px;
+    padding: 5px 10px;
     outline: none;
     box-sizing: border-box;
     border:1px solid var(--shaded);
     margin: 5px 0;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+.form-row input[type=text]:focus,
+.form-row input[type=email]:focus,
+.form-row input[type=password]:focus {
+    border:1px solid var(--primary);
 }
 
 .form-row button,
@@ -88,7 +100,10 @@
     font-size: 1em;
     color:#fff;
     transition: ease-in-out .3s;
+    border-radius: 3px;
 }
+
+
 
 .form-row button:hover,
 .form-row input[type="submit"]:hover,
@@ -101,7 +116,7 @@
     width:200px;
     height:auto;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 50px;
 }
 
 .profile {
@@ -113,10 +128,16 @@
     align-items: center;
 }
 
-.profile p {
+.profile a {
     padding-right:10px;
     font-size: 1.2em;
+    color:#fff;
+    text-decoration: none;
     font-weight: bold;
+}
+
+.profile a:hover {
+    text-decoration: underline;
 }
 
 .avatar {
@@ -124,4 +145,94 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    border:3px solid #fff;
+  }
+
+.profile-pic {
+    width:100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 40px 0;
+}
+
+a {
+    color:var(--primary);
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* padding: 0 4px; */
+}
+
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column:first-child {
+    padding-left: 0;
+}       
+
+.column:last-child {
+    padding-right: 0;
+}
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .add {
+    background-color: var(--primary);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width:100px;
+    height: 100px;
+    position: fixed;
+    top:120px;
+    left:100px;
+    z-index: 100;
+    border-radius: 50%;
+    
+
+  }
+
+  .add:hover {
+      background-color: var(--secondary);
+
+  }
+
+  .add-icon {
+      width:100px;
+      
+  }
+
+@media only screen and (max-width: 600px) {
+    .content, .header, .footer {
+        padding: 20px;
+    }
+
+    form {
+        width:100%;
+    }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+      }
+}
+
+@media screen and (max-width: 800px) {
+    .column {
+      -ms-flex: 50%;
+      flex: 50%;
+      max-width: 50%;
+    }
   }
